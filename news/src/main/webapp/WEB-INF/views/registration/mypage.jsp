@@ -59,6 +59,11 @@
 </script>
 </head>
 <body>
+	<c:if test="${sessionScope.userid == null }">
+		<%
+		response.sendRedirect("login");
+		%>
+	</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h1>registration mypage</h1>

@@ -76,8 +76,9 @@ function fn_goDetail(board_seq) {
 			<p>views/board/index.jsp</p>
 		</div>
 		<c:if test="${sessionScope.userid == null }">
-			<a href="<c:url value="/registration/login" />"
-				class="btn btn-lg btn-primary">로그인</a>
+				<%
+				response.sendRedirect("login");
+				%>
 
 		</c:if>
 		<c:if test="${sessionScope.userid != null }">

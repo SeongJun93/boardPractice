@@ -9,6 +9,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>MypageMain</title>
 <script type="text/javascript">
+
 		$.fn.serializeObject = function() {
 			var o = {};
 			var a = this.serializeArray();
@@ -57,6 +58,11 @@
 </script>
 </head>
 <body>
+		<c:if test="${sessionScope.userid == null }">
+				<%
+				response.sendRedirect("login");
+				%>
+		</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h1>registration MypageMain</h1>
