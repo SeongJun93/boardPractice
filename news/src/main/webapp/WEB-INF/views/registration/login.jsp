@@ -63,6 +63,11 @@ function fn_goJoin(){
 </script>
 </head>
 <body>
+<c:if test="${sessionScope.userid != null }">
+		<%
+		response.sendRedirect("board");
+		%>
+	</c:if>
     <div class="container">
         <div class="jumbotron">
             <h1>login</h1>

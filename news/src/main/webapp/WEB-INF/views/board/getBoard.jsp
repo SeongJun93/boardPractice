@@ -27,16 +27,16 @@
 		};
 
 
-		function fn_goDeliteBoard() {
+		function fn_goDeletePage() {
 			if(confirm("정말삭제하시겠습니까?") == true){
-				$('#frm').attr('action','/board/deleteBoard').submit();
+				$('#frm').attr('action','/deleteBoardPage').submit();
 			}else{
 				return;
 			}
 		}
-		function fn_goDeletePage(){
+		/* function fn_goDeletePage(){
 			$('#frm').attr('action','/deleteBoardPage').submit();
-		}
+		} */
 		
 		
 		function fn_goUpdateBoardPage(){

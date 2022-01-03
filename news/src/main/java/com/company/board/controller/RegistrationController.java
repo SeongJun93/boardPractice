@@ -80,6 +80,23 @@ public class RegistrationController {
 		}
 		return resultMap;
 	}
+	//회원삭제 비밀번호 확인
+	@ResponseBody
+	@RequestMapping(value = "/MypageMain/deleteRegistrationConfirmpwd",consumes = "application/json; charset=UTF-8", produces = MediaType.APPLICATION_JSON_VALUE+"; charset=utf-8")
+	public Map<String,Object> deleteRegistrationConfirmpwd(@RequestBody BoardVO vo,HttpSession session) {
+		Map<String,Object> resultMap = new HashMap<String, Object>();
+		vo.setUserid(String.valueOf(session.getAttribute("userid")));
+		int result = registrationService.myPagePassChk(vo);
+		if(result <= 0) {
+			System.out.println("비밀번호입력실패");
+			resultMap.put("resultCode", "9999");
+		}else {								
+			System.out.println("계정비밀번호확인");
+			resultMap.put("resultCode", "0000");
+		}
+		session.invalidate();
+		return resultMap;
+	}
 	
 
 	// 회원정보수정
@@ -88,19 +105,10 @@ public class RegistrationController {
 	public Map<String, Object> updateMember(@RequestBody BoardVO vo, HttpSession session) {
 		Map<String, Object> resultMap = new HashMap<>();
 		System.out.println("회원정보수정");
-		vo.setUserid(String.valueOf(session.getAttribute("userid")));
 		registrationService.updateRegistration(vo);
 		System.out.println("회원정보수정완료");
 		resultMap.put("resultCode","0000");
 		return resultMap;
-	}
-	
-	@RequestMapping(value = "/MypageMain/deleteRegistration")
-	public String deleteRegistration(BoardVO vo,HttpSession session) {
-		registrationService.deleteRegistration(vo);
-		session.invalidate();
-		System.out.println("회원삭제");
-		return "redirect:/board";
 	}
 	
 	@ResponseBody
@@ -135,5 +143,14 @@ public class RegistrationController {
 		int result = registrationService.idChk(param);
 		return result;
 	}
+
+	@RequestMapping(value = "/MypageMain/deleteRegistration", method = RequestMethod.POST)
+	public String deleteRegistration(BoardVO vo,HttpSession session) {
+		registrationService.deleteRegistration(vo);
+		session.invalidate();
+		System.out.println("회원삭제");
+		return "registration/login";
+	}
+
 	
 }

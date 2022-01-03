@@ -91,7 +91,7 @@ $(document).ready(function() {
         </div>
         <div class="form-group form-group-lg">
             <label class="control-label">제목</label>
-            <input name="title" type="text" class="form-control" maxlength="20">
+            <input name="title" type="text" class="form-control" maxlength="20" placeholder = "제목은 최대 20자입니다.">
         </div>
         <div class="form-group form-group-lg">
             <label class="control-label">작성자</label>
@@ -99,7 +99,7 @@ $(document).ready(function() {
         </div>
         <div class="form-group form-group-lg">
             <label class="control-label">PASS</label>
-            <input name="board_pw" type="password" class="form-control" maxlength="4">
+            <input name="board_pw" type="password" class="form-control" maxlength="4" placeholder = "제목은 최대 4자입니다.">
         </div>
         <div class="form-group form-group-lg">
             <label class="control-label">내용</label>

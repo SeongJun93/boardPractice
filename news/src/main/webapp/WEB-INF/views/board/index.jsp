@@ -85,7 +85,6 @@ function fn_goDetail(board_seq) {
 			<a href="javascript:fn_go('/board/new');" class="btn btn-lg btn-primary">게시글 등록</a>
 			<a href="javascript:fn_go('/registration/mypage');" class="btn btn-lg btn-primary">마이페이지</a>
 			<a href="javascript:fn_go('/registration/logout');" class="btn btn-lg btn-primary">로그아웃</a>
-			<a href="javascript:fn_go('/board');" class="cencle btn btn-lg btn-primary">홈</a> 
 		</c:if>
 	</div>
 	<h1>게시글 목록</h1>

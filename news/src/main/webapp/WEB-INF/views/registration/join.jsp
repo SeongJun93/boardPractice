@@ -155,6 +155,7 @@ $(document).ready(function() {
 			alert("중복확인 버튼을 눌러주세요.");
 			return false;
 		} else if (idChkVal == "Y") {
+			alert("회원가입이 완료되었습니다.")
 			$("#regForm").attr("action","/registration").attr('method','post').submit();
 		}
 	});
@@ -239,18 +240,41 @@ $(document).ready(function() {
 			</div>
 			<div class="form-group form-group-lg">
 				<label class="control-label">PASS CHECK</label> 
-				<input name="password" id="password_chk" type="password" class="form-control" maxlength="16" required>
+				<input name="password_chk" id="password_chk" type="password" class="form-control" maxlength="16" required>
 				<div class="invalid" id="pass_recheck"></div>
 			</div>
 			<div class="form-group form-group-lg">
 				<label class="control-label">이름</label> 
 				<input name="name" id="name" type="text" class="form-control" maxlength="5">
 			</div>
-			<div class="form-group form-group-lg">
+			
+			
+			
+			
+			
+			<div class="form-group form-group-lg" style="float:none; margin:0 auto">
+				<label class="control-label">핸드폰번호</label> 
+				<select class="form-control" style="width:50%;">
+					<option>010</option>
+					<option>011</option>
+					<option>017</option>
+				</select>
+				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control" 
+				maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="width: 50%;">
+				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control"
+				maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="width: 50%;">
+				<div class="valid" id="pnum_check"></div>
+			</div>
+			
+			
+			
+			
+			
+			<!-- <div class="form-group form-group-lg">
 				<label class="control-label">핸드폰번호</label> 
 				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control" maxlength="11" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
 				<div class="valid" id="pnum_check"></div>
-			</div>
+			</div> -->
 			<div class="form-group form-group-lg">
 				<label class="control-label">이메일</label> 
 				<input name="email" id="email" type="text" class="form-control" maxlength="20">

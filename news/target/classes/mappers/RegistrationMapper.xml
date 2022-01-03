@@ -55,7 +55,12 @@
 		DELETE
 		FROM 
 			registration
-		WHERE 
-			USERID = #{userid}
+		WHERE USERID = #{userid} AND PASSWORD = #{password}
 	</delete>
+	<select id="BoardPagePassChk" resultType="int" parameterType="board">
+		SELECT count(1) AS CNT
+		  FROM REGISTRATION 
+		 WHERE USERID = #{userid}
+		   AND PASSWORD = #{password}
+		 </select>
 </mapper> 

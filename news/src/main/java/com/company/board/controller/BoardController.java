@@ -75,6 +75,7 @@ public class BoardController {
 		System.out.println("딜리트 보드페이지 이동");
 		return "/board/deleteBoardPage";
 	}
+	//게시글 삭제
 	@ResponseBody
 	@RequestMapping(value="/boardDelete/confirmpwd", consumes = "application/json; charset=UTF-8", produces = MediaType.APPLICATION_JSON_VALUE+"; charset=utf-8")
 	public Map<String,Object> getMember(@RequestBody BoardVO vo,HttpSession session) {
@@ -83,7 +84,7 @@ public class BoardController {
 		int result = boardService.BoardPagePassChk(vo);
 		if(result > 0) {
 			boardService.deleteBoard(vo);
-			System.out.println("계정비밀번호확인");
+			System.out.println("게시글 비밀번호확인");
 			resultMap.put("resultCode", "0000");
 		}else {								
 			System.out.println("비밀번호입력실패");
