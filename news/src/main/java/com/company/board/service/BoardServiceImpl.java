@@ -17,6 +17,7 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
+		System.out.println("¼­ºñ½º");
 		boardDAO.insertBoard(vo);
 	}
 	@Override

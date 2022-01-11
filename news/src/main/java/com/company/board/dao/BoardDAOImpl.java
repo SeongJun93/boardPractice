@@ -17,6 +17,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
+		System.out.println("´Ù¿À");
 		mybatis.insert("BoardDAO.insertBoard",vo);
 	}
 	@Override

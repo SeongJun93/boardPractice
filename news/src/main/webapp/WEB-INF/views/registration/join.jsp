@@ -246,30 +246,20 @@ $(document).ready(function() {
 			<div class="form-group form-group-lg">
 				<label class="control-label">이름</label> 
 				<input name="name" id="name" type="text" class="form-control" maxlength="5">
-			</div>
-			
-			
-			
-			
-			
-			<div class="form-group form-group-lg" style="float:none; margin:0 auto">
+			</div>							
+			<div class="form-group form-group-lg">
 				<label class="control-label">핸드폰번호</label> 
-				<select class="form-control" style="width:50%;">
+			<!-- 	<select class="form-control"">
 					<option>010</option>
 					<option>011</option>
 					<option>017</option>
-				</select>
+				</select> -->
 				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control" 
-				maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="width: 50%;">
-				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control"
-				maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="width: 50%;">
+				maxlength="11" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+<!-- 				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control"
+				maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> -->
 				<div class="valid" id="pnum_check"></div>
 			</div>
-			
-			
-			
-			
-			
 			<!-- <div class="form-group form-group-lg">
 				<label class="control-label">핸드폰번호</label> 
 				<input name="pnum" id="pnum" id="pnum" type="text" class="form-control" maxlength="11" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
