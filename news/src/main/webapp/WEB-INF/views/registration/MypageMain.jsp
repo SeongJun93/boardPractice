@@ -199,7 +199,7 @@ var fn_check_email = function(){
 				<input name="password_chk" id="password_chk" type="password" class="form-control" maxlength="16" required>
 				<div class="invalid" id="pass_recheck"></div>
 			</div> -->
-					<a href="javascript:fn_UpdateMember();" class="btn btn-lg btn-primary" id="submit">회원정보변경</a>
+					<a href="javascript:fn_UpdateMember();" id="submit"><input type="button" value="회원정보변경" class="btn btn-lg btn-primary"></a>
 					<a href="javascript:fn_cancle();" class="cencle btn btn-lg btn-primary">취소</a> 
 					<a href="javascript:fn_goDeliteForm()" class="btn btn-lg btn-danger">탈퇴</a>
 		</form>

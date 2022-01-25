@@ -9,7 +9,6 @@
 <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <title>GetBoardList</title>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script type="text/javascript">
 //게시글 상세	
 function fn_goDetail(board_seq) {

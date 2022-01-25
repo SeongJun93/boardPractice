@@ -70,11 +70,11 @@ function fn_cancle(){
 
 $(document).ready(function() {
     $('#content').on('keyup', function() {
-        $('#counter').html("("+$(this).val().length+" / 200)");
+        $('#counter').html("("+$(this).val().length+" / 9999)");
  
-        if($(this).val().length > 200) {
-            $(this).val($(this).val().substring(0, 100));
-            $('#counter').html("(200 / 200)");
+        if($(this).val().length > 9999) {
+            $(this).val($(this).val().substring(0, 9998));
+            $('#counter').html("(9999 / 9999)");
         }
     });
 });
@@ -103,8 +103,8 @@ $(document).ready(function() {
         </div>
         <div class="form-group form-group-lg">
             <label class="control-label">내용</label>
-            <textarea id="content" name="content" class="form-control" maxlength="200" style="height:300px;"></textarea>
-            <span style="color:#aaa;" id="counter">(0 / 최대 200자)</span>
+            <textarea id="content" name="content" class="form-control" maxlength="9999" style="height:300px;"></textarea>
+            <span style="color:#aaa;" id="counter">(0 / 최대 9999자)</span>
         </div>
         <!-- <button type="submit" class="btn btn-lg btn-primary">전송</button> -->
      	<a href="javascript:fn_InsertMember();" class="btn btn-lg btn-primary">게시글 저장</a>

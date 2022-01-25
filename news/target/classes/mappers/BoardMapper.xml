@@ -11,7 +11,7 @@
 			,REG_DT
 			,REG_ID
 			,UPDT_DT
-			,UPDT_ID
+			,UPDT_ID			
 		)VALUES(
 			'BOARD'||TO_CHAR(NOW(),'yyyymmdd')||LPAD(NEXTVAL('seq_board_num')::TEXT,8,'0')
 			,#{title}

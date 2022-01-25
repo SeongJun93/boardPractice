@@ -1,28 +1,17 @@
 package com.company.board.domain;
 public class Pagination {
-
 	private int listSize = 10; // 초기값으로 목록개수를 10으로 셋팅 한 페이지당 보여질 리스트의 개수
-
 	private int rangeSize = 10; // 초기값으로 페이지범위를 5로 셋팅 한 페이지 범위에 보여질 페이지의 개수
-
 	private int page = 1; // 현재목록의 페이지 번호
-
 	private int range = 1; // 각 페이지 범위 시작 번호
-
 	private int listCnt; // 전체 개시물의 개수
-
 	private int pageCnt; // 전체 페이지 범위의 개수
-
 	private int startPage; // 각 페이지 범위 시작 번호
-
 	private int startListNum; // 게시판 시작번호
-
 	private int endPage; // 각 페이지 범위 끝 번호
-
 	private boolean prev; // 이전 페이지
-
 	private boolean next; // 다음 페이지
-
+	
 	public int getRangeSize() {
 
 		return rangeSize;
