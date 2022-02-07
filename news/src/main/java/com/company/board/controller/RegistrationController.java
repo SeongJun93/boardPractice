@@ -25,12 +25,12 @@ public class RegistrationController {
 	private RegistrationService registrationService;
 	
 
-	@RequestMapping(value = "/registration/login")
+	@RequestMapping(value="/registration/login")
 	public String login() {
 		System.out.println("로그인입력");
 		return "registration/login";
 	}
-	@RequestMapping(value = "/registration/join", method = RequestMethod.POST)
+	@RequestMapping(value="/registration/join", method = RequestMethod.POST)
 	public String join() {
 		System.out.println("회원가입페이지이동");
 		return "registration/join";
@@ -52,7 +52,7 @@ public class RegistrationController {
 	
 
 	// 회원가입완료
-		@RequestMapping(value = "/registration", method = RequestMethod.POST)
+		@RequestMapping(value="/registration", method = RequestMethod.POST)
 		public String insertRegistration(BoardVO vo) throws Exception {
 			try {
 				/*

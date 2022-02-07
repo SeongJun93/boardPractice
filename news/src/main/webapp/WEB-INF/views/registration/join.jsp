@@ -85,7 +85,6 @@ $(document).ready(function() {
           $('#pass_recheck').css('color', 'green');
           $('#submit').attr("disabled",false);
         }
-
     });
 });
 	
